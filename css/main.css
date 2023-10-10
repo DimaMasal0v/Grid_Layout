@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Scroll-x */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden; /* Скрываем горизонтальный скролл */
+}
+
+/* Стили для медиазапроса, который применяется только для экранов с разрешением до 768px (по умолчанию для мобильных устройств) */
+@media (max-width: 768px) {
+  body {
+    position: relative;
+    overflow-y: auto; /* Показываем вертикальный скролл при необходимости */
+  }
+}
+
+/* Body */
+
+body{
+    max-width: 1440px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    body {
+        max-width: 375px;
+    }
+  }
+
+.container-grid{
+    max-width: 1216px;
+    display: grid;
+    grid-template-columns:repeat(12,72px);
+    gap:32px;/*отступ между колонками*/
+
+    margin: 0 auto;/*Выравнивае по центру*/
+}
+
+@media (max-width: 768px) {
+    .container-grid {
+        display: grid;
+        max-width: 339px;
+        grid-template-columns:repeat(4,72px);
+        gap:18px;/*отступ между колонками*/
+        margin: 0 auto;/*Выравнивае по центру*/
+    }
+  }
+
+.grid-item{
+    background-color: rgb(230, 86, 86);
+    height: 100vh;
+    opacity: 0.7;
+}
+
